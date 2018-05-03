@@ -1,6 +1,7 @@
 function solution(S) {
     const priceDetails = {};
-    // convert into price record object
+    // convert into price record object:
+    // compute Record price with billing rule of each user then we will get the billing record of different user(duration/price)
     const priceRecords = S.split("\n")
         .map((record) => computeRecordPrice(record));
     // merge same user's records into object
@@ -9,18 +10,16 @@ function solution(S) {
             priceDetails[key] = priceDetails[key] ? priceDetails[key].concat(item[key]) : item[key]
         }
     });
-
-    // calculate the total price
+    // calculate the remain price we need pay
     const totalCost = getTotalPrice(priceDetails);
     const deductionPrice = getDeductionPrice(priceDetails);
     return totalCost - deductionPrice;
 }
 
-function getDeductionPrice(priceDetails) {
+function getDeductionPrice(priceDetails) { // cost free
     // merge the same user records' duration and price
     for (const user in priceDetails) {
         priceDetails[user] = priceDetails[user].reduce((pre, next) => {
-            console.log("PRE+NEXT:", pre.duration + next.duration)
             return {
                 duration: pre.duration + next.duration,
                 price: pre.price + next.price
@@ -43,6 +42,7 @@ function getDeductionPrice(priceDetails) {
 }
 
 function getTotalPrice(priceDetails) {
+    // all users
     let total = 0;
     for (const key in priceDetails) {
         total += getSingleTotalPrice(priceDetails[key]);
