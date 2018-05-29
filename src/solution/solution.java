@@ -15,6 +15,17 @@ class solution {
         return true;
     }
 
+    String convertToBinary(int number) {
+        String binary;
+        StringBuilder value = new StringBuilder();
+        while (number != 0) {
+            binary = String.valueOf(number % 2);
+            number = number / 2;
+            value.append(binary);
+        }
+        return new StringBuffer(value.toString()).reverse().toString();
+    }
+
     boolean meeting(List<Interval> intervals) {
 
         for (int num = 0; num < intervals.size() - 1; num++) {
