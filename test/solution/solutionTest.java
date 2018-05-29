@@ -18,8 +18,10 @@ public class solutionTest {
 
     }
 
+
     @Test
     public void testMeeting() throws Exception {
+
         solution solution = new solution();
         ArrayList<Interval> intervals = new ArrayList<Interval>();
         ArrayList<Interval> intervals2 = new ArrayList<Interval>();
@@ -32,10 +34,9 @@ public class solutionTest {
     }
 
     @Test
-    public void testRevereString() throws Exception {
-
+    public void testConvertToBinary() throws Exception {
         solution solution = new solution();
-        assertThat("Reverse", solution.reverse(intervals), is(false));
-
+        assertThat("ConvertToBinary", solution.convertToBinary(5), is("101"));
+        assertThat("ConvertToBinary", solution.convertToBinary(6), is("110"));
     }
 }
