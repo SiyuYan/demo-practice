@@ -69,17 +69,26 @@ class solution {
                     System.out.println(subLength);
                     targetString = subString;
                     break out;
-        // 一旦满足条件，则最大子串即找到，停止循环，
+                    // 一旦满足条件，则最大子串即找到，停止循环，
                 }
             }
         }
         return targetString;
     }
 
+    /*两个字符串，判断其中一个字符串是不是另一个字符串的右移子串。如cda是abcd的右移子串。
+    给出一个字符串，求最长对称子字符串的长度，如输入google，则输出为4。*/
+
+
+    int MaxSymmetryString() {
+
+        return 0;
+    }
+
     public static void main(String[] args) {
 
         String[] text = new String[]{"the weather is good ", "today is good", "today has good weather", "good weather is good"};
-        HashMap<String, Integer> hashMap = new HashMap<String, Integer>();
+        HashMap<String, Integer> hashMap = new HashMap<>();
         for (String temp : text) {
             String[] words = temp.split("\\s");
             for (String word : words) {
@@ -95,5 +104,6 @@ class solution {
             System.out.println(word + ":" + hashMap.get(word));
         }
     }
+
 }
 
