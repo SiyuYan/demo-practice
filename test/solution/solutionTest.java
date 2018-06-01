@@ -18,7 +18,6 @@ public class solutionTest {
 
     }
 
-
     @Test
     public void testMeeting() throws Exception {
 
@@ -38,5 +37,20 @@ public class solutionTest {
         solution solution = new solution();
         assertThat("ConvertToBinary", solution.convertToBinary(5), is("101"));
         assertThat("ConvertToBinary", solution.convertToBinary(6), is("110"));
+    }
+
+    @Test
+    public void convertToHex() throws Exception {
+        solution solution = new solution();
+        assertThat("convertToHex", solution.convertToHex(796), is("1434"));
+    }
+
+    @Test
+    public void subString() throws Exception {
+        solution solution = new solution();
+        String str1 = "asdfdfdfdfdfdfdfdfdfasf34lk343434343433333fdasfd";
+        String str2 = "asdfdfdfdfdfdfdfdfdf3434343434343jfshasdazlzlasbfasfdllzlz";
+
+        assertThat("MaxSubString", solution.getSubString(str1, str2), is("asdfdfdfdfdfdfdfdfdf"));
     }
 }
