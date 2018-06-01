@@ -20,7 +20,6 @@ public class solutionTest {
 
     @Test
     public void testMeeting() throws Exception {
-
         solution solution = new solution();
         ArrayList<Interval> intervals = new ArrayList<Interval>();
         ArrayList<Interval> intervals2 = new ArrayList<Interval>();
