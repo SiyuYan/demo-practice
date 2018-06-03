@@ -1,7 +1,6 @@
 package solution;
 
 import org.junit.Test;
-import sun.jvm.hotspot.utilities.Interval;
 
 import java.util.ArrayList;
 
@@ -21,8 +20,9 @@ public class solutionTest {
     @Test
     public void testMeeting() throws Exception {
         solution solution = new solution();
-        ArrayList<Interval> intervals = new ArrayList<Interval>();
-        ArrayList<Interval> intervals2 = new ArrayList<Interval>();
+        ArrayList<Interval> intervals = new ArrayList<>();
+        ArrayList<Interval> intervals2;
+        intervals2 = new ArrayList<>();
         intervals.add(new Interval(5, 8));
         intervals.add(new Interval(6, 8));
         intervals2.add(new Interval(8, 9));
