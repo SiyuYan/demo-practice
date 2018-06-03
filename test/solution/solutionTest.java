@@ -1,12 +1,12 @@
 package solution;
 
 import org.junit.Test;
+import sun.jvm.hotspot.utilities.Interval;
 
 import java.util.ArrayList;
 
 import static org.hamcrest.core.Is.is;
-import static org.junit.Assert.*;
-
+import static org.junit.Assert.assertThat;
 
 public class solutionTest {
     @Test
@@ -31,6 +31,15 @@ public class solutionTest {
         assertThat("Meeting", solution.meeting(intervals2), is(true));
     }
 
+    //    @Test
+//    public void testRevereString() throws Exception {
+//
+//        solution solution = new solution();
+//        assertThat("Reverse", solution.reverse("ab "), is("ba"));
+//        assertThat("Reverse", solution.reverse("  hello this"), is("olleh siht"));
+//        assertThat("Reverse", solution.reverse("Siyu  Practice  "), is("uyiS ecitcarP"));
+//
+//    }
     @Test
     public void testConvertToBinary() throws Exception {
         solution solution = new solution();
