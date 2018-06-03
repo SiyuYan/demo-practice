@@ -61,4 +61,19 @@ public class solutionTest {
 
         assertThat("MaxSubString", solution.getSubString(str1, str2), is("asdfdfdfdfdfdfdfdfdf"));
     }
+
+    @Test
+    public void testRightSubString() throws Exception {
+        solution solution = new solution();
+
+        assertThat("cda", solution.isRightSubString("cda", "abcd"), is(true));
+        assertThat("cda", solution.isRightSubString("acd", "abcd"), is(false));
+        assertThat("abc", solution.isRightSubString("abc", "abcd"), is(true));
+        assertThat("bcd", solution.isRightSubString("bcd", "abcd"), is(true));
+        assertThat("", solution.isRightSubString("", "abcd"), is(true));
+        assertThat("xxxx", solution.isRightSubString("xxxx", "abcd"), is(false));
+        assertThat("abcde", solution.isRightSubString("abcde", "abcd"), is(false));
+    }
+
+
 }

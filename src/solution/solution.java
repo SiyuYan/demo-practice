@@ -1,9 +1,6 @@
 package solution;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 
 class solution {
 
@@ -81,8 +78,24 @@ class solution {
     给出一个字符串，求最长对称子字符串的长度，如输入google，则输出为4。*/
 
 
-    int MaxSymmetryString() {
+    boolean isRightSubString(String shorter, String longer) {
+        char[] results = longer.toCharArray();
+        char[] chars = longer.toCharArray();
 
+        if (shorter.length() <= longer.length()) {
+            do {
+                char temp = chars[longer.length() - 1];
+                System.arraycopy(chars, 0, chars, 1, longer.length() - 1);
+                chars[0] = temp;
+                String srcStr = String.valueOf(chars);
+                if (srcStr.contains(shorter))
+                    return true;
+            } while (!Arrays.equals(chars, results));
+        }
+        return false;
+    }
+
+    int MaxSymmetryString(String shorter, String longer) {
         return 0;
     }
 
