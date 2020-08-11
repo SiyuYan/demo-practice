@@ -74,8 +74,7 @@ class solution {
         return targetString;
     }
 
-    /*两个字符串，判断其中一个字符串是不是另一个字符串的右移子串。如cda是abcd的右移子串。
-    给出一个字符串，求最长对称子字符串的长度，如输入google，则输出为4。*/
+    /*两个字符串，判断其中一个字符串是不是另一个字符串的右移子串。如cda是abcd的右移子串。。*/
 
 
     boolean isRightSubString(String shorter, String longer) {
@@ -95,12 +94,24 @@ class solution {
         return false;
     }
 
-    int MaxSymmetryString(String shorter, String longer) {
+    /* 给出一个字符串，求最长对称子字符串的长度，如输入google，则输出为4。*/
+
+    int MaxPalindromicString(String s) {
+        if (s.length() == 1) {
+            return 1;
+        }
+        for (int i = 0; i < s.length(); i++) {
+
+
+        }
+
+
         return 0;
     }
 
     public static void main(String[] args) {
-
+        int[] case1 = new int[]{5,1,2,3,4};
+        System.out.println(args);
         String[] text = new String[]{"the weather is good ", "today is good", "today has good weather", "good weather is good"};
         HashMap<String, Integer> hashMap = new HashMap<>();
         for (String temp : text) {

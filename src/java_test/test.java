@@ -1,3 +1,5 @@
+package java_test;
+
 import java.util.*;
 import java.util.stream.Collectors;
 
